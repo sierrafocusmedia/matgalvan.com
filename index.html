@@ -56,19 +56,20 @@ img{max-width:100%;display:block}
 
 <section id="about" style="padding: 96px 24px">
 <style>
-.about-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
-.about-collage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.about-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:start}
+.about-collage{position:sticky;top:24px;margin-top:48px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .about-collage .main{grid-column:span 2}
 .about-creds{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
-@media (max-width:900px){.about-wrap{grid-template-columns:minmax(0,1fr);gap:40px}}
+@media (max-width:900px){.about-wrap{grid-template-columns:minmax(0,1fr);gap:40px}.about-collage{position:static;margin-top:0}}
 @media (max-width:480px){.about-creds{grid-template-columns:minmax(0,1fr)}}
 </style>
 <div class="about-wrap">
 <div style="display: flex; flex-direction: column; gap: 18px">
 <div style="font-size: 14px; font-weight: 600; letter-spacing: 2px; color: #B4502C">ABOUT MAT</div>
 <h2 style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 52px; line-height: 1.02">Raised in the Sierra. Working for all of rural California.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6">Mat Galvan was raised in Tuolumne County and lives in Mi-Wuk Village. He chairs the Tuolumne County Democratic Central Committee, serves as Gold Country Regional Chair of the CDP Rural Caucus, and is a member of the Democratic State Central Committee.</p>
-<p style="margin: 0; font-size: 18px; line-height: 1.6">He founded Sierra Focus Media, a strategy-first communications firm in Sonora, after 15 years in communications. His approach to party work is the same as his approach to client work: set clear goals, measure them, and report back. Receipts, not rhetoric.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6">Mat Galvan was raised in Tuolumne County and lives in Mi-Wuk Village. He is a small business owner, a past president of the Tuolumne County Chamber of Commerce, chair of the Tuolumne County Democratic Central Committee, and Gold Country Regional Chair of the CDP Rural Caucus.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6">He founded Sierra Focus Media in Sonora, a strategy-first communications firm that has served more than 100 small businesses, economic development partners, and campaigns. His 15 years in communications include managing internal communications for about 25,000 Amazon employees across five California locations, and serving as acting marketing director for the Chicken Ranch Rancheria of Me-Wuk Indians as its workforce grew from about 300 to 1,200.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6">From 2024 to 2026 he was Industry Sector Coordinator for Recreation and Tourism with California Jobs First in the Sierra region, supporting partners behind $9 million in project investments. He brings the same approach to party work: set clear goals, measure them, and report back. Receipts, not rhetoric.</p>
 <ul class="about-creds"><li style="display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 1px solid #DDD5C8"><span style="font-weight: 700; font-size: 16px">Chair</span><span style="font-size: 14px; color: #5A6B78">Tuolumne County Democratic Central Committee</span></li><li style="display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 1px solid #DDD5C8"><span style="font-weight: 700; font-size: 16px">Gold Country Regional Chair</span><span style="font-size: 14px; color: #5A6B78">CDP Rural Caucus</span></li><li style="display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 1px solid #DDD5C8"><span style="font-weight: 700; font-size: 16px">Past President</span><span style="font-size: 14px; color: #5A6B78">Tuolumne County Chamber of Commerce</span></li><li style="display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 1px solid #DDD5C8"><span style="font-weight: 700; font-size: 16px">Small Business Owner</span><span style="font-size: 14px; color: #5A6B78">Sierra Focus Media, Sonora</span></li></ul>
 </div>
 <div class="about-collage">
