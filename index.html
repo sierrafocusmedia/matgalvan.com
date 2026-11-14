@@ -19,6 +19,15 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#FAF7F2}
 a{color:#254359}a:hover{color:#B4502C}
 img{max-width:100%;display:block}
+.menu-btn{display:none;background:none;border:2px solid #FF845E;border-radius:8px;width:48px;height:48px;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.menu-btn line{transition:transform .2s,opacity .2s;transform-origin:12px 12px}
+.menu-btn[aria-expanded="true"] .l1{transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .l2{opacity:0}
+.menu-btn[aria-expanded="true"] .l3{transform:translateY(-5px) rotate(-45deg)}
+@media (max-width:640px){.menu-btn{display:flex}
+#main-nav{display:none !important;width:100%;flex-direction:column;gap:0 !important;font-size:18px !important;padding-top:4px}
+#main-nav.open{display:flex !important}
+#main-nav a{padding:14px 0 !important;border-top:1px solid #3C5B73}}
 @media (max-width:640px){h1{font-size:60px !important}h2{font-size:38px !important}
 header{padding:12px 20px !important}
 #top{padding:28px 20px 48px !important}
@@ -40,9 +49,11 @@ footer{padding:48px 20px !important}
 <header style="background: #254359; padding: 16px 24px">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" style="display: flex; align-items: center; padding: 4px 0"><img src="assets/logo-light.png" alt="Mat Galvan for CADEM Rural Caucus Chair" width="240" height="49" style="height: 49px; width: auto"></a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 500">
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#FF845E" stroke-width="2.2" stroke-linecap="round"><line class="l1" x1="4" y1="7" x2="20" y2="7"></line><line class="l2" x1="4" y1="12" x2="20" y2="12"></line><line class="l3" x1="4" y1="17" x2="20" y2="17"></line></svg>
+</button>
+<nav id="main-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 500">
 <a href="#about" style="color: #FAF7F2; text-decoration: none; padding: 10px 0">About</a>
-
 <a href="#goals" style="color: #FAF7F2; text-decoration: none; padding: 10px 0">Plan</a>
 <a href="#action" style="color: #FAF7F2; text-decoration: none; padding: 10px 0">Caucus Goals</a>
 <a href="#endorsements" style="color: #FAF7F2; text-decoration: none; padding: 10px 0">Endorsements</a>
@@ -215,5 +226,11 @@ footer{padding:48px 20px !important}
 </footer>
 
 </div>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('main-nav');if(!b||!n)return;
+function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');}
+b.addEventListener('click',function(){set(!n.classList.contains('open'));});
+n.addEventListener('click',function(e){if(e.target.tagName==='A')set(false);});})();
+</script>
 </body>
 </html>
